@@ -4,9 +4,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Welcome } from '../screens/Welcome';
 import { UserIdentification } from '../screens/UserIdentification';
 import { Confirmation } from '../screens/Confirmation';
+import { PlantSelect } from '../screens/PlantSelect';
+import { PlantSave } from '../screens/PlantSave';
+
+import { ExpoCamera } from '../screens/Camera';
 
 import colors from '../styles/colors';
-import { PlantSelect } from '../screens/PlantSelect';
 
 const StackRoutes = createStackNavigator();
 
@@ -35,6 +38,14 @@ const AppRoutes = () => (
       name="PlantSelect"
       component={PlantSelect}
     />
+    <StackRoutes.Screen  
+      name="PlantSave"
+      component={PlantSave}
+    />
+    {/* <StackRoutes.Screen  
+      name="Camera"
+      component={ExpoCamera}
+    /> */}
   </StackRoutes.Navigator>
 );
 
